@@ -13,13 +13,17 @@
       try {
         var stored = localStorage.getItem('pf_theme_mode_v1');
         var meta = document.querySelector('meta[name="color-scheme"]');
+        var metaTheme = document.querySelector('meta[name="theme-color"]');
+        var prefersDark =
+          window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var effective =
+          stored === 'light' || stored === 'dark' ? stored : prefersDark ? 'dark' : 'light';
         if (stored === 'light' || stored === 'dark') {
           if (meta) meta.setAttribute('content', stored);
-          document.documentElement.dataset.theme = stored;
-        } else {
-          var prefersDark =
-            window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-          document.documentElement.dataset.theme = prefersDark ? 'dark' : 'light';
+        }
+        document.documentElement.dataset.theme = effective;
+        if (metaTheme) {
+          metaTheme.setAttribute('content', effective === 'dark' ? '#121417' : '#F6F4EF');
         }
       } catch (e) {}
     </script>
@@ -31,8 +35,8 @@
       rel="stylesheet"
     />
     <title>PlacaFácil — Cartelería y Placas Comerciales</title>
-    <script type="module" crossorigin src="./assets/index-BU8ph1XS.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-Bvl-Vyw9.css">
+    <script type="module" crossorigin src="./assets/index-Dv4WPlos.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DRMWD6IW.css">
   <link rel="manifest" href="./manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="./registerSW.js"></script></head>
   <body>
     <div id="root"></div>
