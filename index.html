@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es-AR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#F6F4EF" />
+    <meta
+      name="description"
+      content="PlacaFácil: placas de oferta, listas de precios, carteles de góndola A4 y placas QR con Alias para comercios argentinos."
+    />
+    <script>
+      try {
+        var stored = localStorage.getItem('pf_theme_mode_v1');
+        var meta = document.querySelector('meta[name="color-scheme"]');
+        if (stored === 'light' || stored === 'dark') {
+          if (meta) meta.setAttribute('content', stored);
+          document.documentElement.dataset.theme = stored;
+        } else {
+          var prefersDark =
+            window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          document.documentElement.dataset.theme = prefersDark ? 'dark' : 'light';
+        }
+      } catch (e) {}
+    </script>
+    <link rel="icon" type="image/svg+xml" href="./icon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>PlacaFácil — Cartelería y Placas Comerciales</title>
+    <script type="module" crossorigin src="./assets/index-Bnabd2SP.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-Bci-VQtU.css">
+  <link rel="manifest" href="./manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="./registerSW.js"></script></head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
