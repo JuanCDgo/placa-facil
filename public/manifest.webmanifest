@@ -1,0 +1,31 @@
+{
+  "name": "PlacaFácil",
+  "short_name": "PlacaFácil",
+  "description": "Placas promocionales, listas de precios, carteles de góndola A4 y QR de cobro offline sin marca de agua.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F1E9D8",
+  "theme_color": "#5F6A22",
+  "icons": [
+    {
+      "src": "./icon-192.png?v=3d",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon-512.png?v=3d",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon-512.png?v=3d",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
